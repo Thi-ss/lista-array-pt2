@@ -4,7 +4,6 @@ const produtos = [
   { id: 3, nome: "Teclado", preco: 150, estoque: 10, ativo: false },
   { id: 4, nome: "Monitor", preco: 1200, estoque: 3, ativo: true }
 ];
-const nomes = produtos.map((produto)=> {
-  return produto.nome.toUpperCase();
-});
-console.log(nomes);
+
+let primeiroInativo = produtos.findIndex((i) => !i.ativo)
+console.log(primeiroInativo);
